@@ -1,2 +1,12 @@
-<h1>Welcome to Jumpstart!</h1>
-<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+<div>
+  <%= link_to "Customers", root_path %>
+</div>
+<div>
+  <%= link_to "Paid Customers", root_path(paid: true) %>
+</div>
+<div>
+  <%= link_to "Customers Date Range", request.params.except(:paid) %>
+</div>
+<div>
+  <%= link_to "Paid Customers Date Range", request.params.merge(paid: true) %>
+</div>
