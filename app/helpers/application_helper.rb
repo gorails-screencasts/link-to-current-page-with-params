@@ -7,4 +7,8 @@ module ApplicationHelper
       notice: "alert-info"
     }.stringify_keys[flash_type.to_s] || flash_type.to_s
   end
+
+  def current_page_params
+    request.params.slice("paid")
+  end
 end
